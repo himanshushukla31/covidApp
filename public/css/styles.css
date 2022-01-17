@@ -1,0 +1,60 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/* .dashboard {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 60%;
+  position: relative;
+  margin: auto;
+  padding: 10px; /*Align div to centre of a parent div 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.dashboard {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+/* .box {
+  z-index: auto;
+  margin-left: 1rem;
+  padding: 1.5rem; /*Add equal width to all the divs inside a parent div*/
+  /* border: solid 1px; */
+  /* display: inline-block; */
+  /* position: relative; */
+  /* background-color: white; */
+/* }  */
+
+
+.box {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 40px 30px;
+  margin-bottom: 10px;
+  box-shadow: 0px 15px 20px 0px hsl(229, 21%, 86%);
+}
+
+
+.mapArea {
+  background: #e8e5e5; 
+  margin: 10px;
+  height: 60vh;
+  display: block;
+}
+
+#map {
+  width: auto;
+  height: inherit;
+  position: relative;
+  margin: auto;
+}

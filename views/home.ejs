@@ -1,0 +1,57 @@
+<%- include("partials/header") -%>
+
+<section id="maps">
+    <div class="mapArea">
+        <div id='map'></div>
+    </div>
+</section>
+<section id="dashboard" >
+    <h1><%= Title %></h1>
+        <div class="dashboard">
+            <div class="box">
+                <h2>
+                    Total Cases
+                </h2>
+                <h1><%= (todayCase/1000).toPrecision(4)+ "k" %></h1>
+                <p>
+                    <%= (totalCase/1000000).toPrecision(4)+ "m" %>
+                </p>
+            </div>
+            <div class="box">
+                <h2>
+                    Recovered
+                </h2>
+                <h1><%= (todayRecovered/1000).toPrecision(4)+ "k" %></h1>
+                <p>
+                    <%= (recoveredCase/1000000).toPrecision(4)+ "m" %>
+                </p>
+            </div>
+            <div class="box">
+                <h2>
+                    Death
+                </h2>
+                <h1><%= todayDeath %></h1>
+                <p>
+                    <%= (totalDeath/1000000).toPrecision(4)+ "m" %>
+                </p>
+            </div>
+        </div>
+        
+</section>
+<section id="country stats">
+    <% List.forEach((item)=> { %>
+    <div class="box">
+        <h3><%= item.Country %></h3>
+        <p><%= item.TotalConfirmed %></p>
+    </div>
+    <%})%>
+</section>
+
+<script>
+    const mapToken = '<%-process.env.MAP_TOKEN%>';
+    const coordinate = [ <%-geometry%> ]
+</script>
+
+<script src="/javascript/showMap.js"></script>
+
+<%- include("partials/footer") -%>
